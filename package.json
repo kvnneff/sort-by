@@ -1,11 +1,11 @@
 {
 	"name": "sort-by",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "create comparator functions for the native Array.sort()",
 	"main": "index.js",
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/staygrimm/dynamic-sort.git"
+		"url": "git://github.com/staygrimm/sort-by.git"
 	},
 	"keywords": [
 		"array",
