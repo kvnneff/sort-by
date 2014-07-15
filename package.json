@@ -1,7 +1,7 @@
 {
 	"name": "sort-by",
 	"version": "0.0.1",
-	"description": "sort an array of objects using multiple sort keys",
+	"description": "create comparator functions for the native Array.sort()",
 	"main": "index.js",
 	"repository": {
 		"type": "git",
