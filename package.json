@@ -1,0 +1,25 @@
+{
+	"name": "sort-by",
+	"version": "0.0.1",
+	"description": "sort an array of objects using multiple sort keys",
+	"main": "index.js",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/staygrimm/dynamic-sort.git"
+	},
+	"keywords": [
+		"array",
+		"object",
+		"sort"
+	],
+	"author": "river grimm",
+	"license": "MIT",
+	"readmeFilename": "readme.md",
+	"scripts": {
+		"test": "make test"
+	},
+	"devDependencies": {
+		"mocha": "*",
+		"chai": "*"
+	}
+}

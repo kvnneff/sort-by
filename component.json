@@ -1,0 +1,8 @@
+{
+	"name": "sort-by",
+	"repo": "staygrimm/sort-by",
+	"description": "sort an array of objects using multiple sort keys",
+	"version": "0.0.1",
+	"license": "MIT",
+	"scripts": ["index.js"]
+}
