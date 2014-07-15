@@ -1,4 +1,4 @@
-sortBy
+sortBy [![Build Status](https://travis-ci.org/staygrimm/sort-by.svg?branch=master)]
 =====================
 
 
