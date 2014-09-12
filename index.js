@@ -1,4 +1,5 @@
-var sortBy,
+var objectPath = require("object-path"),
+    sortBy,
     sort;
 
 /**
@@ -16,7 +17,7 @@ sort = function sort(property) {
     }
 
     fn = function fn(a,b) {
-        var result = (a[property] < b[property]) ? -1 : (a[property] > b[property]) ? 1 : 0;
+        var result = (objectPath.get(a, property) < objectPath.get(b, property)) ? -1 : (objectPath.get(a, property) > objectPath.get(b, property)) ? 1 : 0;
         return result * sortOrder;
     }
 

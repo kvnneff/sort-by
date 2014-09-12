@@ -18,6 +18,9 @@
 	"scripts": {
 		"test": "make test"
 	},
+	"dependencies": {
+		"object-path": "0.6.x"
+	},
 	"devDependencies": {
 		"mocha": "*",
 		"chai": "*"
