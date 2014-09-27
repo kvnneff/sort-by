@@ -2,7 +2,14 @@
 	"name": "sort-by",
 	"repo": "staygrimm/sort-by",
 	"description": "create comparator functions for the native Array.sort()",
-	"version": "0.0.2",
+	"version": "1.0.0",
 	"license": "MIT",
+    "main": "index.js",
+    "dependencies": {
+        "eivindfjeldstad/dot": "0.1.0"
+    },
+    "development": {
+        "component/assert": "*"
+    },
 	"scripts": ["index.js"]
 }
