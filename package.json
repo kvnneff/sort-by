@@ -1,28 +1,31 @@
 {
-	"name": "sort-by",
-	"version": "0.0.2",
-	"description": "create comparator functions for the native Array.sort()",
-	"main": "index.js",
-	"repository": {
-		"type": "git",
-		"url": "git://github.com/staygrimm/sort-by.git"
-	},
-	"keywords": [
-		"array",
-		"object",
-		"sort"
-	],
-	"author": "river grimm",
-	"license": "MIT",
-	"readmeFilename": "readme.md",
-	"scripts": {
-		"test": "make test"
-	},
-	"dependencies": {
-		"object-path": "0.6.x"
-	},
-	"devDependencies": {
-		"mocha": "*",
-		"chai": "*"
-	}
+  "name": "sort-by",
+  "version": "1.0.0",
+  "description": "Sort objects by property names using native Array.sort()",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/staygrimm/sort-by.git"
+  },
+  "keywords": [
+    "array",
+    "object",
+    "sort"
+  ],
+  "author": "river grimm",
+  "license": "MIT",
+  "readmeFilename": "Readme.md",
+  "scripts": {
+    "test": "make test"
+  },
+  "dependencies": {
+    "object-path": "0.6.0"
+  },
+  "devDependencies": {
+    "duo": "^0.8.4",
+    "duo-test": "^0.3.4",
+    "mocha-phantomjs": "^3.5.0",
+    "phantomjs": "^1.9.10",
+    "uglify-js": "^2.4.15"
+  }
 }

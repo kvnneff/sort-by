@@ -1,26 +1,26 @@
-build: components index.js
-	@component build --dev
+T = node_modules/.bin/duo-test
+TESTS = $(filter-out test/tests.js, $(wildcard test/*.js))
+SRC = index.js
 
-components: component.json
-	@component install --dev
+build.js: test/tests.js
+	duo --root . --type js < $< > $@
 
-test:
-	@./node_modules/mocha/bin/mocha --reporter spec
+test/tests.js: $(SRC) $(TESTS)
+	@echo '// GENERATED FILE: DO NOT EDIT!' > $@
+	@$(foreach test, $(TESTS), echo 'require("./$(test)");' >> $@;)
 
-dist-build:
-	@component build -s sortBy -o dist -n sort-by
+test: test-phantomjs
 
-dist-minify: dist/sort-by.js
-	@curl -s \
-		-d compilation_level=SIMPLE_OPTIMIZATIONS \
-		-d output_format=text \
-		-d output_info=compiled_code \
-		--data-urlencode "js_code@$<" \
-		http://closure-compiler.appspot.com/compile \
-		> $<.tmp
-	@mv $<.tmp dist/sort-by.min.js
+test-phantomjs: build.js
+	@$(T) phantomjs --reporter spec
+
+test-browser: build.js
+	@$(T) browser
+
+test-saucelabs: build.js
+	@$(T) saucelabs -b safari:6..7
 
 clean:
-	rm -fr build components
+	rm -rf test/tests.js build.js components
 
-.PHONY: clean test build dist
+.PHONY: clean test test-phantomjs test-browser

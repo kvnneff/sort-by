@@ -1,6 +1,6 @@
-var objectPath = require("object-path"),
-    sortBy,
-    sort;
+var objectPath = require('mariocasciaro/object-path');
+var sortBy;
+var sort;
 
 /**
  * Return a comparator function
@@ -8,20 +8,21 @@ var objectPath = require("object-path"),
  * @return {Function}        Returns the comparator function
  */
 sort = function sort(property) {
-    var sortOrder = 1,
-        fn;
+    var sortOrder = 1;
+    var fn;
 
-    if(property[0] === "-") {
+    if (property[0] === "-") {
         sortOrder = -1;
         property = property.substr(1);
     }
 
-    fn = function fn(a,b) {
-        var result = (objectPath.get(a, property) < objectPath.get(b, property)) ? -1 : (objectPath.get(a, property) > objectPath.get(b, property)) ? 1 : 0;
+    return function fn(a,b) {
+        var result;
+        if (objectPath.get(a, property) < objectPath.get(b, property)) result = -1;
+        if (objectPath.get(a, property) > objectPath.get(b, property)) result = 1;
+        if (objectPath.get(a, property) === objectPath.get(b, property)) result = 0;
         return result * sortOrder;
     }
-
-    return fn;
 };
 
 /**
@@ -29,11 +30,11 @@ sort = function sort(property) {
  * @return {Function} Returns the comparator function
  */
 sortBy = function sortBy() {
-    var props = arguments,
-        fn;
+    var properties = arguments;
+    var fn;
     
-    fn =  function fn(obj1, obj2) {
-        var numberOfProperties = props.length,
+    return function fn(obj1, obj2) {
+        var numberOfProperties = properties.length,
             result = 0,
             i = 0;
 
@@ -41,13 +42,15 @@ sortBy = function sortBy() {
          * as long as we have extra properties to compare
          */
         while(result === 0 && i < numberOfProperties) {
-            result = sort(props[i])(obj1, obj2);
+            result = sort(properties[i])(obj1, obj2);
             i++;
         }
         return result;
     };
-
-    return fn;
 };
 
+/**
+ * Expose `sortBy`
+ * @type {Function}
+ */
 module.exports = sortBy;
