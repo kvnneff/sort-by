@@ -1,6 +1,6 @@
 --- 
 addons: 
-  sauce_connect: false
+  sauce_connect: true
 env: 
   global: 
     - 
