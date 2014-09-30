@@ -18,7 +18,7 @@ test-browser: build.js
 	@$(T) browser
 
 test-saucelabs: build.js
-	@$(T) saucelabs -b safari:6..7
+	@$(T) saucelabs -b safari:6..stable,chrome:35..stable,firefox:29..stable,ie:8..stable
 
 clean:
 	rm -rf test/tests.js build.js components
