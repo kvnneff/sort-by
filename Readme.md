@@ -4,7 +4,7 @@ sortBy ![Build Status](https://travis-ci.org/staygrimm/sort-by.svg?branch=master
 
 A utility to create comparator functions for the native `Array.sort()`.  Allows for sorting by multiple properties.
 
-A majority of the code comes from [this StackOverflow answer][1].
+Inspired by [this StackOverflow answer][1].
 
 ----------
 
