@@ -9,8 +9,6 @@ array.push({x: 3, y: 1, z: {a: 3}});
 array.push({x: 2, y: 3, z: {a: 3}});
 array.push({x: 1, y: 2, z: {a: 1}});
 
-console.log(array);
-
 describe('Sort()', function () {
     it('returns a function', function () {
         assert(typeof sortBy() === 'function');
