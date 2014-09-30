@@ -9,7 +9,7 @@ test/tests.js: $(SRC) $(TESTS)
 	@echo '// GENERATED FILE: DO NOT EDIT!' > $@
 	@$(foreach test, $(TESTS), echo 'require("./$(test)");' >> $@;)
 
-test: test-saucelabs
+test: test-browser
 
 test-phantomjs: build.js
 	@$(T) phantomjs --reporter spec
