@@ -16,7 +16,7 @@
   "license": "MIT",
   "readmeFilename": "Readme.md",
   "scripts": {
-    "test": "make test"
+    "test": "make test-node"
   },
   "dependencies": {
     "object-path": "0.6.0"
