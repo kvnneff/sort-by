@@ -1,13 +1,5 @@
-script: make test-saucelabs
-addons:
-  sauce_connect: true
-env:
-  global:
-  - secure: KfvYgNSC/zNgRifn13zx9WmtxfrxQ5/vEcvlXNOfiK5vVdiDP1TykN9t2cFlrBZWkbR+bHJVu+Ewhx5KqUm09KlNREdfMzLKAxtYDpUTPUJXHH4uJRU+EealmTSBvoDyVlxg/A+Nx5NJNp2iTCFgYHcMZmdhn4ChzLYSIqFZiMs=
-  - secure: gFmp7iAJeFblhpxVlUdVDtvn0amkX/0AomMkfxqxCUFKBRdn9AQJ4L4R7fO/qa6/eR0e4aMhrCQ1H0ML2W5s0dOiOW39DvduTuNxQXBK/hCdgfGXQFOFxtV556/3MYz89J/M0dCRdNKJyI5lWGNK0BcdNgeDWHVjFhaPbb9FLAM=
-  - secure: XHWpVYST0Ddp1VQgJspv2re3I2GIF17HPjPTcTKTpBYyZE6GwAYMCLOZlSL5S8pZx2PRJthvmu3IxL7KCkEDbKnbtOTtJw00lUbgR4F3JKZBrRQDlWOSnrA5dizREVr9cohyGJDuSj4nOIPNXzIAjAoDaFTFNDPI46PzAXI/w3I=
-  - secure: Zvci0gKKrleG+UE2lKY00fCCCoXtPvdXqnkq7xyN3cHaMHYPWP41VwrmcnCD0nTHc2Nb6j8YosbsJd16PYvJoK/vjuzsMyonn7Hd/fGnvC4C/HUK/xMuNF50iDqvjEuIivskrK3CVIKsRjQLisiEd9zhPOca9obHKT/Wvega7ms=
-  - secure: hS8KehYJn9YaTA8xM7NYEeG70sSO/f4qu97tWeiYr4+X1R7pOT5uPw9gEDf+ITzOWqiJ7DZgFWJjtHXa6GoxjmGN6KO+iQndas+qjum/dtzkTSDU2NcwxhHV0IOHpTAENrCM7JEpACxmDzB34GuRlz4purlp6LgfVPW35VPPZCE=
 language: node_js
 node_js:
 - 0.11
+- 0.10
+- 0.8
