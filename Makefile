@@ -11,6 +11,9 @@ test/tests.js: $(SRC) $(TESTS)
 
 test: test-browser
 
+test-node:
+	node_modules/.bin/mocha test/index.js --reporter spec
+
 test-phantomjs: build.js
 	@$(T) phantomjs --reporter spec
 

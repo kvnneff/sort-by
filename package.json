@@ -24,6 +24,7 @@
   "devDependencies": {
     "duo": "^0.8.4",
     "duo-test": "^0.3.4",
+    "mocha": "^2.0.1",
     "mocha-phantomjs": "^3.5.0",
     "phantomjs": "^1.9.10",
     "uglify-js": "^2.4.15"

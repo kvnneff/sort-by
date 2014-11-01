@@ -6,7 +6,7 @@
 	"license": "MIT",
     "main": "index.js",
     "dependencies": {
-        "eivindfjeldstad/dot": "0.1.0"
+        "mariocasciaro/object-path": "*"
     },
     "development": {
         "component/assert": "*"

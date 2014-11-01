@@ -1,4 +1,4 @@
-var objectPath = require('mariocasciaro/object-path');
+var objectPath = require('object-path');
 var sortBy;
 var sort;
 
@@ -32,7 +32,7 @@ sort = function sort(property) {
 sortBy = function sortBy() {
     var properties = arguments;
     var fn;
-    
+
     return function fn(obj1, obj2) {
         var numberOfProperties = properties.length,
             result = 0,
