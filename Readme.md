@@ -2,7 +2,7 @@ sort-by ![Build Status](https://travis-ci.org/staygrimm/sort-by.svg?branch=maste
 =====================
 
 
-A utility to create comparator functions for the native `Array.sort()`.  Allows for sorting by multiple properties.
+A utility to create comparator functions for the native `Array.sort()` in both node and the browser.  Allows for sorting by multiple properties.
 
 Inspired by [this StackOverflow answer][1].
 
