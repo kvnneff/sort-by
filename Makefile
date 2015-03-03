@@ -6,7 +6,7 @@ SRC = index.js
 build: node_modules
 	@$(D) --stdout index.js > build/index.js
 
-build-test:
+build-test: node_modules build
 	@$(D) --stdout test/index.js > build/test.js
 
 node_modules:
