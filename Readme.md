@@ -1,4 +1,4 @@
-sort-by ![Build Status](https://travis-ci.org/staygrimm/sort-by.svg?branch=master)
+sort-by [![browser support](https://ci.testling.com/staygrimm/sort-by.png)](https://ci.testling.com/staygrimm/sort-by)
 =====================
 
 

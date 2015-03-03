@@ -24,9 +24,21 @@
   "devDependencies": {
     "duo": "^0.8.4",
     "duo-test": "^0.3.4",
-    "mocha": "^2.0.1",
-    "mocha-phantomjs": "^3.5.0",
-    "phantomjs": "^1.9.10",
-    "uglify-js": "^2.4.15"
+    "mocha": "^2.0.1"
+  },
+  "testling": {
+    "harness": "mocha",
+    "browsers": [
+      "ie/6..latest",
+      "chrome/22..latest",
+      "firefox/16..latest",
+      "safari/latest",
+      "opera/11.0..latest",
+      "iphone/6",
+      "ipad/6",
+      "android-browser/latest"
+    ],
+    "preprocess": "make build-test",
+    "scripts": ["build/*.js"]
   }
 }
