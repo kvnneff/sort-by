@@ -5,10 +5,10 @@ SRC = index.js
 
 build: node_modules
 	mkdir -p build
-	@$(D) --stdout index.js > build/index.js
+	@$(D) --stdout index.js > build/build.js
 
 build-test: node_modules build
-	@$(D) --stdout test/index.js > build/test.js
+	@$(D) --stdout test/index.js > test/build.js
 
 node_modules:
 	npm install
