@@ -16,14 +16,14 @@
   "license": "MIT",
   "readmeFilename": "Readme.md",
   "scripts": {
-    "test": "make test-node"
+    "test": "make test"
   },
   "dependencies": {
     "object-path": "0.6.0"
   },
   "devDependencies": {
-    "duo": "^0.8.4",
-    "duo-test": "^0.3.4",
+    "duo": "^0.9.6",
+    "duo-test": "^0.3.13",
     "mocha": "^2.0.1"
   },
   "testling": {
@@ -39,6 +39,8 @@
       "android-browser/latest"
     ],
     "preprocess": "make build-test",
-    "scripts": ["build/*.js"]
+    "scripts": [
+      "build/*.js"
+    ]
   }
 }

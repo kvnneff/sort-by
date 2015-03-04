@@ -4,6 +4,7 @@ T = node_modules/.bin/duo-test
 SRC = index.js
 
 build: node_modules
+	mkdir -p build
 	@$(D) --stdout index.js > build/index.js
 
 build-test: node_modules build
