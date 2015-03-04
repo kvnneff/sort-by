@@ -40,7 +40,6 @@
     ],
     "preprocess": "make build-test",
     "scripts": [
-      "build/build.js",
       "test/build.js"
     ]
   }
