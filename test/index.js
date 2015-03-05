@@ -1,5 +1,9 @@
 'use strict';
-var assert = require('component/assert');
+try {
+    var assert = require('insist');
+} catch(e) {
+    var assert = require('component/assert');
+}
 var sortBy = require('..');
 var array = [];
 

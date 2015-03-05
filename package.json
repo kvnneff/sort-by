@@ -32,13 +32,13 @@
     "scripts": ["test/build.js"],
     "preprocess": "make build-test",
     "browsers": [
-      "ie/6..latest",
-      "chrome/22..latest",
-      "firefox/16..latest",
+      "ie/6.0..latest",
+      "chrome/22.0..latest",
+      "firefox/16.0..latest",
       "safari/latest",
       "opera/11.0..latest",
-      "iphone/6",
-      "ipad/6",
+      "iphone/6.0",
+      "ipad/6.0",
       "android-browser/latest"
     ]
   }
