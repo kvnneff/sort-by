@@ -24,10 +24,13 @@
   "devDependencies": {
     "duo": "^0.9.6",
     "duo-test": "^0.3.13",
+    "insist": "^0.2.3",
     "mocha": "^2.0.1"
   },
   "testling": {
     "harness": "mocha",
+    "scripts": ["test/build.js"],
+    "preprocess": "make build-test",
     "browsers": [
       "ie/6..latest",
       "chrome/22..latest",
@@ -37,10 +40,6 @@
       "iphone/6",
       "ipad/6",
       "android-browser/latest"
-    ],
-    "preprocess": "make build-test",
-    "scripts": [
-      "test/build.js"
     ]
   }
 }

@@ -14,7 +14,7 @@
     "yields/fmt": "0.0.2"
   },
   "development": {
-    "component/assert": "*"
+    "seanmonstar/insist:insist.js": "*"
   },
   "scripts": [
     "index.js"

@@ -1,11 +1,6 @@
 'use strict';
-try {
-    var assert = require('assert');
-} catch (e) {
-    var assert = require('component/assert');
-}
-
-var sortBy = require('../');
+var assert = require('component/assert');
+var sortBy = require('..');
 var array = [];
 
 array.push({x: 4, y: 1, z: {a: 2}});
