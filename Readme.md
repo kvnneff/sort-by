@@ -1,4 +1,4 @@
-sort-by [![browser support](https://ci.testling.com/staygrimm/sort-by.png)](https://ci.testling.com/staygrimm/sort-by)
+sort-by [![travis ci](https://travis-ci.org/kvnneff/sort-by.svg)](https://travis-ci.org/kvnneff/sort-by)
 =====================
 
 
@@ -82,7 +82,7 @@ License
 ---
 (The MIT License)
 
-Copyright (c) 2013 River Grimm river.grimm@gmail.com
+Copyright (c) 2013 Kevin Neff kvnneff@gmail.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

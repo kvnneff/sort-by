@@ -1,18 +1,18 @@
 {
   "name": "sort-by",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Sort objects by property names using native Array.sort()",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/staygrimm/sort-by.git"
+    "url": "git://github.com/kvnneff/sort-by.git"
   },
   "keywords": [
     "array",
     "object",
     "sort"
   ],
-  "author": "river grimm",
+  "author": "Kevin Neff",
   "license": "MIT",
   "readmeFilename": "Readme.md",
   "scripts": {
