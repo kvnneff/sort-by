@@ -4,3 +4,4 @@ build
 node_modules
 test/tests.js
 build.js
+npm-debug.log
