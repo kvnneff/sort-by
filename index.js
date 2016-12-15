@@ -1,14 +1,14 @@
 var objectPath = require('object-path');
 var sortBy;
 var sort;
-var filter;
+var type;
 
 /**
  * Filters args based on their type
  * @param  {String} type Type of property to filter by
  * @return {Function}
  */
-filter = function(type) {
+type = function(type) {
     return function(arg) {
         return typeof arg === type;
     };
@@ -47,9 +47,8 @@ sort = function sort(property, map) {
 sortBy = function sortBy() {
 
     var args = Array.prototype.slice.call(arguments);
-
-    var properties = args.filter(filter('string'));
-    var map = args.filter(filter('function'))[0];
+    var properties = args.filter(type('string'));
+    var map = args.filter(type('function'))[0];
 
     return function fn(obj1, obj2) {
         var numberOfProperties = properties.length,

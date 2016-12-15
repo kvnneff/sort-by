@@ -43,9 +43,9 @@ describe('Sort(prop)', function () {
        assert(array[3].name === 'cuckoos');
        assert(array[4].name === 'swallow');
 
-       array.sort(sortBy('name', function(key, value) {
-            return key === 'name' ? value.toLowerCase() : value;
-       }));
+array.sort(sortBy('name', function(key, value) {
+    return key === 'name' ? value.toLowerCase() : value;
+}));
 
        assert(array[0].name === 'cuckoos');
        assert(array[1].name === 'Finch');
