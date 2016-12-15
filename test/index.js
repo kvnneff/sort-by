@@ -26,6 +26,34 @@ describe('Sort(prop)', function () {
         assert(array[3].x === 4);
         assert(array[3].y === 1);
     });
+    it('sorts an array case-insensitively by applying a function', function() {
+
+        var array = [
+            { name: 'Hummingbird' },
+            { name: 'swallow' },
+            { name: 'Finch' },
+            { name: 'Sparrow' },
+            { name: 'cuckoos' }
+        ];
+
+       array.sort(sortBy('name'));
+       assert(array[0].name === 'Finch');
+       assert(array[1].name === 'Hummingbird');
+       assert(array[2].name === 'Sparrow');
+       assert(array[3].name === 'cuckoos');
+       assert(array[4].name === 'swallow');
+
+       array.sort(sortBy('name', function(key, value) {
+            return key === 'name' ? value.toLowerCase() : value;
+       }));
+
+       assert(array[0].name === 'cuckoos');
+       assert(array[1].name === 'Finch');
+       assert(array[2].name === 'Hummingbird');
+       assert(array[3].name === 'Sparrow');
+       assert(array[4].name === 'swallow');
+
+    });
 });
 
 describe('Sort(prop, prop)', function () {
