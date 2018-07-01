@@ -64,6 +64,27 @@ describe('Sort(prop, prop)', function () {
         assert(array[3].x === 2);
         assert(array[3].y === 3);
     });
+
+    it('supports Date objects', function() {
+        var date1 = new Date('2018-01-01T00:00:00Z')
+        var date2 = new Date('2018-01-02T00:00:00Z')
+        var date3 = new Date('2018-01-03T00:00:00Z')
+
+        var array = [
+            { name: 'Hummingbird', date: new Date(date1) },
+            { name: 'swallow', date: new Date(date2) },
+            { name: 'Finch', date: new Date(date1) },
+            { name: 'Sparrow', date: new Date(date2) },
+            { name: 'cuckoos', date: new Date(date3) }
+        ];
+
+       array.sort(sortBy('date', 'name'));
+       assert(array[0].name === 'Finch');
+       assert(array[1].name === 'Hummingbird');
+       assert(array[2].name === 'Sparrow');
+       assert(array[3].name === 'swallow');
+       assert(array[4].name === 'cuckoos');
+    });
 });
 
 describe('Sort(-prop)', function () {

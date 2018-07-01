@@ -30,12 +30,11 @@ sort = function sort(property, map) {
     }
 
     return function fn(a,b) {
-        var result;
         var am = apply(property, objectPath.get(a, property));
         var bm = apply(property, objectPath.get(b, property));
+        var result = 0;
         if (am < bm) result = -1;
         if (am > bm) result = 1;
-        if (am === bm) result = 0;
         return result * sortOrder;
     }
 };
