@@ -33,6 +33,11 @@ sort = function sort(property, map) {
         var result;
         var am = apply(property, objectPath.get(a, property));
         var bm = apply(property, objectPath.get(b, property));
+        if (am === undefined) {
+            if (bm === undefined) result = 0;
+            else result = 1;
+        }
+        if (bm === undefined) result = -1;
         if (am < bm) result = -1;
         if (am > bm) result = 1;
         if (am === bm) result = 0;
@@ -44,9 +49,8 @@ sort = function sort(property, map) {
  * Return a comparator function that sorts by multiple keys
  * @return {Function} Returns the comparator function
  */
-sortBy = function sortBy() {
+sortBy = function sortBy(...args) {
 
-    var args = Array.prototype.slice.call(arguments);
     var properties = args.filter(type('string'));
     var map = args.filter(type('function'))[0];
 

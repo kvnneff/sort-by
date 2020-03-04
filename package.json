@@ -29,7 +29,9 @@
   },
   "testling": {
     "harness": "mocha",
-    "scripts": ["test/build.js"],
+    "scripts": [
+      "test/build.js"
+    ],
     "preprocess": "make build-test",
     "browsers": [
       "ie/6.0..latest",

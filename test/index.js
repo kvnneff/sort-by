@@ -95,3 +95,24 @@ describe('Sort(-prop.prop)', function () {
         assert(array[3].y === 2);
     });
 });
+
+describe('Sort(undefined)', function () {
+    it('can sort, even with random some `undefined`s', function () {
+        var sorter = "name";
+        var tags = [
+          {name: "b"},
+          {name: undefined},
+          {name: "a"},
+          {name: null},
+          {name: ""},
+          {},
+        ];
+        tags.sort(sortBy(sorter));
+        assert(tags[0].name === "a");
+        assert(tags[1].name === "b");
+        assert(tags[2].name === null);
+        assert(tags[3].name === "");
+        assert(tags[4].name === undefined);
+        assert(tags[5].name === undefined);
+    });
+});
