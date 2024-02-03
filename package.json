@@ -19,17 +19,19 @@
     "test": "make test"
   },
   "dependencies": {
-    "object-path": "0.6.0"
+    "object-path": "0.11.8"
   },
   "devDependencies": {
-    "duo": "^0.9.6",
-    "duo-test": "^0.3.13",
-    "insist": "^0.2.3",
-    "mocha": "^2.0.1"
+    "duo": "^0.12.3",
+    "duo-test": "^0.4.1",
+    "insist": "^1.0.1",
+    "mocha": "^10.2.0"
   },
   "testling": {
     "harness": "mocha",
-    "scripts": ["test/build.js"],
+    "scripts": [
+      "test/build.js"
+    ],
     "preprocess": "make build-test",
     "browsers": [
       "ie/6.0..latest",
